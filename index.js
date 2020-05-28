@@ -14,7 +14,7 @@ const server = new ApolloServer({
     context: ({ req }) => ({ req, pubsub })
 });
 
-const MONGODB = config.MONGODB;
+const MONGODB = config.mongoURI;
 mongoose.connect(MONGODB, {useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         console.log('MongoDb Connected!')
