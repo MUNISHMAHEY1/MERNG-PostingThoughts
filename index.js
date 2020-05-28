@@ -22,6 +22,6 @@ mongoose.connect(MONGODB, {useNewUrlParser: true, useUnifiedTopology: true })
         console.log(`Server running at ${res.url}`);
     })
     .catch(err => {
-        console.log(err);
+        console.error(err);
     })
 
